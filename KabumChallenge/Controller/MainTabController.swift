@@ -19,7 +19,7 @@ class MainTabController: UITabBarController {
     func configureViewControllers() {
         
         ///Início
-        let initial = InitialViewController(collectionViewLayout: UICollectionViewFlowLayout())
+        let initial = StartViewController(collectionViewLayout: UICollectionViewFlowLayout())
         let nav1 = templateNavigationController(image: UIImage(systemName: "house.fill"), rootViewController: initial, title: "Início")
         
         ///Categorias
@@ -37,6 +37,7 @@ class MainTabController: UITabBarController {
         viewControllers = [nav1,nav2,nav3,nav4]
     }
     
+    //MARK: - TemplateNavigationController
     func templateNavigationController(image: UIImage?, rootViewController: UIViewController, title: String?) -> UINavigationController {
         let nav = UINavigationController(rootViewController: rootViewController)
         nav.tabBarItem.image = image
